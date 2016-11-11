@@ -1,16 +1,13 @@
 require 'spec_helper'
 
 describe GrooveHQ::Client::Tickets, integration: true do
-
   let(:client) { GrooveHQ::Client.new }
 
   describe "#tickets_count" do
-
     it "successfully gets tickets count" do
       response = client.tickets_count
       expect(response).to be_instance_of GrooveHQ::Resource
     end
-
   end
 
   describe "#create_ticket" do
@@ -22,7 +19,7 @@ describe GrooveHQ::Client::Tickets, integration: true do
 
     let(:customer_hash) do
       {
-        email: "customer@example.com",
+        email: ENV['USER'],
         about: "Your internal reference",
         company_name: "SomeCompany Pty Ltd"
       }
