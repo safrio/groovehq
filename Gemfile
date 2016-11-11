@@ -6,5 +6,7 @@ group :test do
   gem 'webmock'
 end
 
+gem 'dotenv-rails', groups: %w(development test)
+
 # Specify your gem's dependencies in groovehq.gemspec
 gemspec
